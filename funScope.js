@@ -68,3 +68,36 @@ console.log(more);
 setTimeout(function () {
     console.log("I have waited 3 s!");
 }, 3000);
+
+(function (a = 666) {
+    if (a === 666) {
+        console.log("666!");
+    }
+}) ();
+
+//try/catch
+
+try{
+    undefined();
+}
+catch (err) {
+    console.log(err);
+}
+
+//let .vs const
+var foo = true;
+if (foo) {
+    var a = 2;
+    let b = 3;
+    a = 3
+    b = 4;
+    console.log(b);
+}
+console.log(a);
+
+if (foo) {
+    const b = 10;
+    //while using const, the value can not be permuted anymore!
+    //b = 11;
+    console.log(b);
+}
